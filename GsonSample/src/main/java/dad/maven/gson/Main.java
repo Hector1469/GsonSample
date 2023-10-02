@@ -8,22 +8,22 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-        // Pedir nombre
+        //Le pido el nombre al usuario
         System.out.print("Introduzca su nombre: ");
         String Nombre = sc.nextLine();
 
-        // Pedir apellidos
+        //Le pido los apellidos al usuario
         System.out.print("Introduzca sus apellidos: ");
         String Apellidos = sc.nextLine();
 
-        // Pedir edad
+        //Le pido edad al usuario
         System.out.print("Introduzca su edad: ");
         int Edad = sc.nextInt();
 
-        // Crear una instancia de Persona con los datos introducidos
+        //Creo una instancia de Persona 
         Persona p = new Persona(Nombre, Apellidos, Edad);
 
-        // Crear un objeto Gson para convertir a JSON y mostrarlo
+        //Creo un objeto Gson para convertirlo a JSON y luego lo muestro en pantalla
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String json = gson.toJson(p);
         System.out.println(json);
